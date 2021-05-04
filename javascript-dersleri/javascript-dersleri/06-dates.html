@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tarih = new Date();
+        console.log(typeof tarih, tarih);
+        console.log(tarih instanceof Date);
+
+        var tarih2 = new Date(60 * 1000);
+        console.log(tarih2);
+
+        var tarih3 = new Date('2/13/2015');
+        console.log(tarih3);
+
+        var tarih4 = new Date('Merhaba');
+        console.log(tarih4);
+
+        var sonuc = Date.now();
+        console.log(sonuc,new Date(1618483763452));
+
+        var sonuc2= Date.parse('Merhaba');
+        console.log(sonuc2);
+
+        console.log(tarih.toUTCString());
+        console.log(tarih.toISOString());
+        console.log(tarih.toDateString());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

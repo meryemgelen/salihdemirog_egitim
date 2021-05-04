@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        class Person {
+            constructor(yas) {
+                this.ad = '';
+                this.soyad = '';
+                this.yas = yas;
+            }
+
+            consolePrint(){
+                console.log(this.ad);
+                console.log(this.soyad);
+                console.log(this.yas);
+            }
+        }
+
+        class Student extends Person {
+            constructor() {
+                super(18);
+                this.okulNo;
+            }
+        }
+
+        class Teacher extends Person {
+            constructor(ad, soyad, yas, maas) {
+                super(yas);
+
+                this.ad = ad;
+                this.soyad = soyad;
+                // this.yas = yas;
+                this.maas = maas;
+            }
+        }
+
+        let student = new Student();
+        student.ad = "Salih";
+        student.soyad = "Demiroğ";
+        console.log(student.ad, student.soyad, student.yas);
+
+        let teacher = new Teacher("Engin", "Demir", 36,5000);
+        console.log(teacher.ad, teacher.soyad, teacher.yas,teacher.maas);
+
+        console.log(teacher instanceof Person);
+        console.log(student instanceof Person);
+        console.log(student instanceof Teacher);
+
+        student.consolePrint();
+        teacher.consolePrint();
+
+
+        function fullDataPrint(person) {
+            person.consolePrint();
+
+            if(person instanceof Teacher){
+                console.log(person.maas);
+            }
+
+        }
+
+        fullDataPrint(teacher);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

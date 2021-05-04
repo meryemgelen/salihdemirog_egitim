@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #box {
+            background-color: yellow;
+            top: 100px;
+            left: 100px;
+            position: fixed;
+            margin: 20px;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            let offsetInfo = $("#box").offset();
+            let positionInfo = $("#box").position();
+
+            $("p").html(`Box Offset: Top:${offsetInfo.top} Left:${offsetInfo.left} <br> Box Position: Top:${positionInfo.top} Left:${positionInfo.left}`);
+
+            $("#btnChangeOffset").click(function () {
+                $("#box").offset({
+                    top: 200,
+                    left: 200
+                });
+
+                $(window).scrollTop(200);
+            });
+
+            $(window).scroll(function () {
+                let scroolTop= $(window).scrollTop()
+                let scroolLeft= $(window).scrollLeft()
+               console.log(scroolTop,scroolLeft);
+            });
+          
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnChangeOffset">Konum Değiştir</button>
+    <div id="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae laboriosam mollitia commodi deserunt.
+        Magnam et nisi blanditiis ullam, corrupti distinctio, totam ducimus, at est odio dolore provident dolor maiores
+        sit.
+    </div>
+    <p></p>
+</body>
+
+</html>

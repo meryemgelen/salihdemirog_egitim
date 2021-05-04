@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Bu bir başlıktır</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p class="red"></p>
+    <p class="red"></p>
+    <div>
+        <p>Div P 1</p>
+        <p>Div P 2</p>
+    </div>
+    <script>
+        // console.log(document.getElementById("p1"));
+
+        let p1 = document.getElementById("p1");
+        p1.innerText = "Bu bir text verisidir";
+        p1.style.color = "red";
+
+        document.getElementById("p2").innerHTML = "<b> bu bir html verisidir</b>"
+
+        let redClasses = document.getElementsByClassName("red");
+
+        for (let i = 0; i < redClasses.length; i++) {
+            const element = redClasses[i];
+            element.innerText = `${i}. kırmızı paragraf`;
+            element.style.backgroundColor = "red";
+            element.style.color = "yellow";
+        }
+
+        let pCount = document.getElementsByTagName("p");
+        console.log(pCount.length);
+
+        document.querySelector("div p").style.color = "red";
+        document.querySelectorAll("div p").forEach(element => element.style.backgroundColor = "green");
+    </script>
+
+</body>
+
+</html>

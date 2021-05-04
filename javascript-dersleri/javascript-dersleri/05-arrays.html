@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var dizi = [10, 20, 30, "Salih"];
+        var dizi2 = new Array(10, 20, 30, "salih");
+
+        console.log(typeof dizi, dizi);
+        console.log(typeof dizi2, dizi2);
+
+        console.log(dizi.length);
+        console.log(dizi2.length);
+
+        var dizi3 = new Array(3);
+        console.log(dizi3.length);
+
+
+        console.log("-----------------");
+        var isimler = ["Salih", "Engin", "Ahmet"];
+
+        var ilkIsim = isimler[0];
+
+        isimler[1] = "Derin";
+
+        isimler[3] = "Mustafa";
+
+        console.log(ilkIsim);
+        console.log(isimler[1]);
+        console.log(isimler[2]);
+        console.log(isimler[3]);
+
+
+        var yeniDizi = new Array(3);
+        console.log(yeniDizi[0], yeniDizi[1], yeniDizi[2], yeniDizi[3]);
+
+        console.log("-----------------");
+
+        var sayilar = [1, 2, 3];
+        console.log(typeof sayilar)
+        console.log(sayilar instanceof Array);
+
+        console.log("eleman sayısı", sayilar.length);
+
+        sayilar.push(4);
+        console.log("eleman sayısı", sayilar.length);
+        console.log(sayilar.toString());
+        sayilar.pop();
+        console.log("eleman sayısı", sayilar.length);
+        console.log(sayilar.toString());
+
+        sayilar.splice(1, 1);
+        
+        console.log(sayilar.toString());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

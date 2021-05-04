@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            overflow: hidden;
+            width: 500px;
+        }
+
+        .slider ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider ul li {
+            list-style: none;
+            float: left;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            let imageWidth = $(".slider ul").width();
+            let imageCount = $(".slider ul li").length;
+            let totalWidth = imageWidth * imageCount;
+
+            $(".slider ul").width(totalWidth);
+
+            let counter = 0;
+            $(".next").click(function () {
+                if (counter < imageCount - 1) {
+                    counter++
+
+                    let newWidth = counter * imageWidth;
+                    $(".slider ul").animate({
+                        "margin-left": `-${newWidth}px`
+                    });
+                } else {
+                    counter = 0;
+
+                    $(".slider ul").animate({
+                        "margin-left": "0px"
+                    });
+                }
+            });
+
+            $(".prev").click(function () {
+                if (counter > 0) {
+                    counter--;
+
+                    let newWidth = counter * imageWidth;
+
+                    $(".slider ul").animate({
+                        "margin-left": `-${newWidth}px`
+                    });
+
+                } else {
+                    counter = imageCount - 1;
+                    let newWidth = imageWidth * counter;
+                    
+                    $(".slider ul").animate({
+                        "margin-left": `-${newWidth}px`
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="slider">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="/assets/img/1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="/assets/img/2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="/assets/img/3.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div>
+            <a href="#" class="prev">Geri</a>
+            <a href="#" class="next">İleri</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

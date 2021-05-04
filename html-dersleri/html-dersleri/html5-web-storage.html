@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function addToLocalStorage() {
+            var txtData = document.getElementById('txtData').value;
+
+            localStorage.setItem('txtData', txtData);
+
+            alert('Tamamlandı');
+        }
+
+        function removeFromLocalStorage() {
+            localStorage.removeItem('txtData');
+            alert('Tamamlandı');
+        }
+
+        function getFromLocalStorage() {
+            let data = localStorage.getItem('txtData');
+            alert(data);
+            alert('Tamamlandı');
+        }
+
+        function addToSessionStorage() {
+            var txtData = document.getElementById('txtData').value;
+
+            sessionStorage.setItem('txtData', txtData);
+            alert('Tamamlandı');
+        }
+
+        function removeFromSessionStorage() {
+            sessionStorage.removeItem('txtData');
+            alert('Tamamlandı');
+        }
+
+        function getFromSessionStorage() {
+            let data = sessionStorage.getItem('txtData');
+            alert(data);
+            alert('Tamamlandı');
+        }
+
+        function clearAllWebStorageData() {
+            localStorage.clear();
+            sessionStorage.clear();
+            alert('Tamamlandı');
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="txtData">
+    <br>
+    <button onclick="addToLocalStorage()">Add to Local Storage</button>
+    <button onclick="removeFromLocalStorage()">Remove from Local Storage</button>
+    <button onclick="getFromLocalStorage()">Get from Local Storage</button>
+    <br>
+    <button onclick="addToSessionStorage()">Add to Session Storage</button>
+    <button onclick="removeFromSessionStorage()">Remove from Session Storage</button>
+    <button onclick="getFromSessionStorage()">Get from Session Storage</button>
+    <br>
+    <button onclick="clearAllWebStorageData()">Clear All Data</button>
+
+    <script>
+        document.write(document.cookie);
+    </script>
+</body>
+
+</html>

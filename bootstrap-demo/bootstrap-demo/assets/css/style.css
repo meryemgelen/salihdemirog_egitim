@@ -1,0 +1,4 @@
+.carousel img{
+    /* filter: grayscale(100%); */
+    filter:brightness(50%);
+}

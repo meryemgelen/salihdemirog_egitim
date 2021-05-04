@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function yazdir(btn) {
+            var txtParagraf = document.getElementById('txtParagraf');
+            var pParagraf = document.getElementById("pParagraf");
+
+            // pParagraf.innerText = txtParagraf.value;
+
+            console.log(btn);
+            alert(txtParagraf.value);
+        }
+
+        function consolaYazdir() {
+            console.log(document.getElementById('txtParagraf').value);
+        }
+
+
+        function customRemoveEventListener() {
+            document.getElementById("btnTikla2").removeEventListener("click", consolaYazdir);
+        }
+
+        function tikla(event) {
+            alert("Google a gitme");
+
+            console.log(event);
+            event.preventDefault();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="txtParagraf" value=""
+        onkeyup="document.getElementById('pParagraf').innerText=this.value">
+    <button id="btnTikla1" onclick="yazdir(this);">Tıkla</button>
+    <button id="btnTikla2">Tıkla 2</button>
+    <button onclick="customRemoveEventListener();">Bitir</button>
+    <p id="pParagraf">
+
+    </p>
+
+    <a href="https://google.com.tr" target="_blank" onclick="tikla(event);">Google</a>
+
+    <script>
+        document.getElementById("btnTikla2").addEventListener("click", consolaYazdir);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            border: 1px solid red;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnStart").click(function () {
+                $("#box").animate({ "margin-left": "200px" }, 2000)
+                    .delay(2000)
+                    .animate({ "margin-top": "200px" }, 2000)
+                    .animate({ "margin-left": "0px" }, 2000)
+                    .animate({ "margin-top": "0px" }, 2000);
+            });
+
+            $("#btnStop").click(function () {
+                // $("#box").stop();
+                // $("#box").stop(true);
+                $("#box").stop(true, true);
+            });
+
+            $("#btnFinish").click(function () {
+                $("#box").finish();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnStart">Başlat</button>
+    <button id="btnStop">Durdur</button>
+    <button id="btnFinish">Bitir</button>
+
+    <div id="box">
+
+    </div>
+</body>
+
+</html>

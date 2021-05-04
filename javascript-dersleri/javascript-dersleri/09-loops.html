@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        console.log("...while...");
+
+        var iterationCount = 3;
+        var counter = 1;
+
+        // while (counter <= iterationCount) {
+        //     console.log("sayac:" , counter);
+
+        //     // counter = counter + 1;
+        //     counter++;
+        // }
+
+
+        while (counter <= iterationCount)
+            console.log("sayac:", counter++);
+
+        console.log("...do while...");
+
+        var iterationCount2 = 3;
+        var counter2 = 1;
+
+        do {
+            console.log("sayac:", counter2++);
+        } while (counter2 <= iterationCount2);
+
+
+        console.log("...for...");
+
+        for (let sayac = 1; sayac <= 10; sayac++) {
+
+            if (sayac == 3)
+                continue;
+
+            if (sayac == 6)
+                break;
+
+            console.log("sayac:", sayac);
+        }
+
+
+        console.log("...for in...");
+
+        var kullanici = {
+            ad: "Salih",
+            soyad: "Demiroğ",
+            yas: 34
+        };
+
+        for (const eleman in kullanici) {
+
+            console.log(eleman, ":", kullanici[eleman]);
+        }
+
+        console.log("...for of...");
+        var isimler = ["Salih","Ahmet","Mehmet"];
+
+        for (let isim of isimler) {
+            console.log(isim);
+        }
+
+        for (let index = 0; index < isimler.length; index++) {
+            console.log(isimler[index]);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

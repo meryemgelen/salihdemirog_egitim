@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* body{
+            color:red;
+        } */
+
+        /* li:not(.baskent){
+            color:red;
+        } */
+
+        /* ul>li:first-child{
+            color:red;
+        } */
+
+        /* ul>li:last-child{
+            color:red;
+        } */
+
+        /* ul>li:nth-child(3){
+            color:red;
+        } */
+
+        /* ul>li:first-of-type{
+            color:red;
+        } */
+
+        /* p:only-child{
+            color:red;
+        } */
+
+        /* p:only-of-type{
+            color:red;
+        } */
+
+        /* a:link{
+            color: aqua;
+        } */
+
+        #abc-com:link {
+            color: aqua;
+        }
+
+        #abc-com:visited {
+            color: brown;
+        }
+
+        #abc-com:hover {
+            color: darkgreen;
+        }
+
+        #abc-com:active {
+            color: greenyellow;
+        }
+
+        input:required {
+            background-color: deeppink;
+        }
+
+        input:read-only {
+            background-color: bisque;
+        }
+
+        input:disabled{
+            background-color: blueviolet;
+        }
+
+        p.paragraf::first-line{
+            color: red;
+        }
+
+        p::first-letter{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        p.paragraf::after{
+            content: '...';
+        }
+
+        p.paragraf::before{
+            content: '*'
+        }
+
+        p::selection{
+            background-color: red;
+            color: yellow;;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Makale Başlığı</h3>
+    <a id="abc-com" href="http://abc.com">Link1</a> <a href="http://def.com">Link2</a>
+    <p class="paragraf">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quisquam quos possimus impedit dicta
+        similique quidem repudiandae ipsam dolor nisi cupiditate alias ex recusandae facere iste fugiat omnis? Cum,
+        placeat.
+    </p>
+    <div>
+        <div>İlk eleman</div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nam at itaque exercitationem asperiores
+            ipsam sapiente a fugit similique labore. Natus quaerat et reprehenderit blanditiis eos esse, nulla
+            dignissimos cumque.
+        </p>
+        <p>
+            başka p
+        </p>
+    </div>
+    <ul>
+        <div>Başlık</div>
+        <li class="baskent">Ankara</li>
+        <li>İzmir</li>
+        <li>İstanbul</li>
+        <li>Diyarbakır</li>
+        <li>Adana</li>
+    </ul>
+
+    <div>
+        Zorunlu <input type="text" required>
+    </div>
+    <div>
+        Readonly <input type="text" name="y" readonly value="readonly">
+    </div>
+    <div>
+        Disable <input type="text" name="x" disabled value="disable">
+    </div>
+</body>
+
+</html>

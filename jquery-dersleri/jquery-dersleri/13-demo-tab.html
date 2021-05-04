@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.tab>ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .active {
+            background-color: lightskyblue !important;
+            color: black !important;
+        }
+
+        div.tab>ul>li {
+            display: inline-block;
+            padding: 8px;
+            background-color: grey;
+            border: 2px solid black;
+            border-radius: 5px 5px 0 0;
+            color: white;
+            border-bottom: none;
+
+        }
+
+        div.tab>ul>li:hover {
+            cursor: pointer !important;
+        }
+
+        div.tab>div {
+            border: 2px solid gray;
+            padding: 10px;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("div.tab>div:not(:first)").hide();
+
+            $("div.tab>ul>li").click(function () {
+                $("div.tab>div").hide();
+
+                let tabIndexNo = $(this).index();
+
+                let $div = $("div.tab>div").get(tabIndexNo);
+                $($div).slideDown(300);
+
+                $("div.tab>ul>li").removeClass("active");
+
+                let $tabItem =  $("div.tab>ul>li").get(tabIndexNo);
+                $($tabItem).addClass("active");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="tab">
+        <ul>
+            <li class="active">1. Tab</li>
+            <li>2. Tab</li>
+            <li>3. Tab</li>
+        </ul>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus, excepturi autem harum
+            exercitationem dolorem. Ut nisi aliquid quia eaque.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto vitae iure sit doloremque commodi
+            nostrum fugit nobis, sunt perferendis, adipisci distinctio dolor enim facere asperiores at accusantium
+            placeat maxime praesentium.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, natus.
+        </div>
+    </div>
+</body>
+
+</html>

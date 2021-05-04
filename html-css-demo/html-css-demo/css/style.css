@@ -1,0 +1,165 @@
+body{
+    background-image:url('/images/background.png');
+    background-repeat: repeat-x;
+    background-color: #1c478e;
+
+    font-family: Calibri, sans-serif;
+    margin-bottom: 70px;
+}
+
+ul{
+    padding: 0;
+}
+
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#header>h1{
+    color:white;
+    float: left;
+}
+
+#header>h2{
+    color: lightskyblue;
+    float: right;
+}
+
+#menu{
+    height: 30px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+#menu > ul{
+    margin: 0;
+}
+
+#menu > ul > li.menuitem{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#menu > ul > li.menuitem a{
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+#menu > ul > li.menuitem a:hover{
+    color: lightskyblue;
+ }
+
+ #aside {
+     float: left;
+     width: 250px;
+ }
+
+ #link{
+     background-color: #1c478e;
+     border-radius: 10px;
+     padding: 10px;
+ }
+
+ #link>h3{
+     color:white;
+     margin-top: 5px;
+     border-bottom: 2px solid white;
+     margin-bottom: 0;
+ }
+
+ /* #link>ul{
+     padding: 0;
+ } */
+
+ #link>ul>li{
+   list-style: none;
+   border-bottom: 1px dashed white;
+   margin: 5px 0;
+   padding: 5px 0;
+}
+
+/* #link>ul>li:first-child{
+    margin-top: 1px;
+} */
+
+#link>ul>li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+ }
+
+ #link>ul>li a:hover{
+    color: lightskyblue;
+ }
+
+ #content {
+    float: right;
+    width: 720px;
+}
+
+
+#footer{
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.section{
+    background-color: white;
+    border: 10px solid #1c478e;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.section h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.section h3{
+    color: #1c478e;
+}
+
+.section p{
+    text-align: justify;
+}
+
+.developer{
+    width: 24%;
+    display: inline-block;
+}
+
+.developer h4{
+    color: lightskyblue;
+    margin-bottom: 5px;
+}
+
+.developer > ul > li{
+    list-style: none;
+}
+
+.float-right{
+    float: right;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.clearfix{
+    clear: both;
+}

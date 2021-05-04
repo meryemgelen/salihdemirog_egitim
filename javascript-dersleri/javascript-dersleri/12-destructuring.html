@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let carIds = [1, 2, 5, 4, 5, 6, 7];
+        let [car1, car2, car3, ...otherCars] = carIds;
+
+        console.log(car1, car2, car3);
+        console.log(otherCars);
+
+
+        let car = { id: 5000, style: 'convertible' };
+        let { id, style } = car;
+
+        console.log(id, style);
+
+        //Spread Syntax
+
+        function ortalamAl(sayilar) {
+            var array = new Array(...sayilar);
+
+            var toplam = 0.0;
+
+            for (const eleman of array) {
+                toplam += eleman;
+            }
+
+            return toplam / array.length;
+        }
+
+        console.log(ortalamAl([1, 2, 3, 5, 6]));
+
+        function startCars(car1, car2, car3) {
+            console.log(car1, car2, car3);
+        }
+
+        let carsId = [100, 300, 500];
+        startCars(...carsId);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

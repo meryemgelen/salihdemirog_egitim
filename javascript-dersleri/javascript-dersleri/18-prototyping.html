@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Car(carId) {
+            this.id = carId;
+            this.start = function () {
+                console.log("Araba çalıştırıldı");
+            }
+        }
+
+        Car.prototype.stop = function () {
+
+            // var ifade= "Araba durduruldu " + this.id;
+
+            //String interpolation
+
+            var ifade = `Araba durduruldu ${this.id}`;
+
+            console.log(ifade);
+        }
+
+        var car = new Car(123);
+        console.log(car.id);
+
+        car.start();
+        car.stop();
+
+
+        Date.prototype.toplaGunAyYil = function () {
+            return this.getDay() + this.getMonth() + this.getFullYear();
+        }
+
+        var date = new Date();
+        console.log(date.toplaGunAyYil());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

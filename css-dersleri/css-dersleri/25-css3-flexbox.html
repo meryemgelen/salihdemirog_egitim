@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            height: 600px;
+            border: 1px solid red;
+            display: flex;
+            /* flex-direction: row; */
+            flex-flow: row wrap;
+
+            justify-content: space-evenly;
+            align-items: flex-end;
+            align-content: center;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            align-self: center;
+            /* flex-grow: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" style="background-color: lightgreen; ; order: 1; ">A</div>
+        <div class="item" style="background-color: lightsalmon; height: 200px; order: 2; ">B</div>
+        <div class="item" style="background-color: lightskyblue; order:3; ">C</div>
+    </div>
+</body>
+
+</html>

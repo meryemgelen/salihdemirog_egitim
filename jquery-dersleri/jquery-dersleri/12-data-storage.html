@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("body").data("firstName", "Salih");
+            $("body").data("lastName", "Demiroğ");
+            $("body").data("user", { ad: 'Salih', soyad: 'Demirog' });
+
+            let bodyData = $("body").data();
+
+            console.log(bodyData);
+
+            $("div").html($("body").data("firstName"));
+
+            $("div").each(function () {
+
+                let $tooltipDiv = $(this);
+                let isTooltip = Boolean($tooltipDiv.data("tooltip"));
+
+                if (isTooltip) {
+                    let message = $tooltipDiv.data("tooltip-message")
+                    $tooltipDiv.attr("title", message);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <div data-tooltip="true" data-tooltip-message="Merhaba"></div>
+</body>
+
+</html>

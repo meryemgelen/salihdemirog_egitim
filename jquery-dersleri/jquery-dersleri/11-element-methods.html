@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("ul > li").each(function () {
+                //    console.log($(this).html());
+
+                let $li = $(this);
+                let indexNo = $li.index();
+
+                console.log($li.html(), indexNo)
+
+            });
+
+            $("ul > li").click(function () {
+                $(this).hide();
+            });
+
+            let liCount = $("ul > li").length;
+            alert(liCount);
+
+            let listItems= $("ul > li").get();
+            let firstListItem =  $("ul > li").get(0);
+
+            console.log("get All Items",listItems);
+            console.log("get first item",firstListItem);
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>1.Li</li>
+        <li>2.Li</li>
+        <li>3.Li</li>
+        <li>4.Li</li>
+        <li>5.Li</li>
+        <li>6.Li</li>
+    </ul>
+</body>
+
+</html>

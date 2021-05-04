@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-yellow {
+            background-color: yellow;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnWrap").click(function () {
+                $("#pLorem").wrap("<div class='bg-yellow'></div>");
+            });
+
+            $("#btnAppendPrepend").click(function () {
+
+                $("#myDiv").prepend("<a href='#'>Google Prepend</a>")
+
+                $("#myDiv").append("<a href='#'>Google Append</a>");
+            });
+
+            $("#btnAfterBefore").click(function () {
+                $("#myDiv").before("<a href='#'>Google Before</a>");
+
+                $("#myDiv").after("<a href='#'>Google After</a>");
+            });
+
+            $("#btnEmpty").click(function () {
+                $("#pLorem").empty();
+            });
+
+            $("#btnRemove").click(function () {
+                $("#pLorem").remove();
+            });
+
+            $("#btnClone").click(function () {
+                let $div1 = $("#div1").clone();
+
+                $("#div2").append($div1.text());
+            });
+
+            $("ul li a").click(function () {
+                $(this).replaceWith("<p>Tıkladın</p>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnWrap">Wrap</button>
+    <button id="btnAppendPrepend">Append & Prepend</button>
+    <button id="btnAfterBefore">After & Before</button>
+    <button id="btnEmpty">Empty</button>
+    <button id="btnRemove">Remove</button>
+    <button id="btnClone">Clone</button>
+
+    <p id="pLorem">Lorem, ipsum dolor.</p>
+    <div id="myDiv">Ben Bir Div Elementiyim</div>
+    <div id="div1">Lorem ipsum dolor sit amet.</div>
+    <div id="div2" style="border: 1px solid red;">
+    </div>
+
+    <ul>
+        <li><a href="#">1. Li</a></li>
+        <li><a href="#">2. Li</a></li>
+        <li><a href="#">3. Li</a></li>
+        <li><a href="#">4. Li</a></li>
+    </ul>
+</body>
+
+</html>

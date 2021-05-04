@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("form").on("submit", function (event) {
+                event.preventDefault();
+                console.log($(this).serialize());
+            });
+
+            $("#btnAjax").click(function () {
+                $.ajax("https://api-sanalmarket.azurewebsites.net/categories", {
+                    dataType: "json",
+                    method: "GET",
+                    contentType: "application/json",
+                    data: {
+                        ad: 'salih',
+                        soyad: 'demirog'
+                    },
+                    success: function (response) {
+                        for (let i = 0; i < response.length; i++) {
+                            const category = response[i];
+
+                            $("#result").append(`<li>${category.name}</li>`);
+                        }
+                    },
+                    error: function (err) {
+                        console.error(err);
+                    },
+                    complete:function(){
+                        alert("Ajax request tamamlandı");
+                    }
+                });
+
+                $.getJSON("https://api-sanalmarket.azurewebsites.net/categories",function (response) {
+                    for (let i = 0; i < response.length; i++) {
+                            const category = response[i];
+
+                            $("#result").append(`<li>${category.name}</li>`);
+                        }
+                });
+                
+            });
+        });
+
+        function serializeForm() {
+            alert($("#frm").serialize());
+        }
+    </script>
+</head>
+
+<body>
+    <form id="frm">
+        <input type="text" name="txtAd">
+        <br>
+        <input type="text" name="txtSoyad">
+        <br>
+        <input type="number" name="txtYas">
+        <input type="button" value="Serileştir" id="btn" onclick="serializeForm()">
+        <button>Gönder</button>
+    </form>
+    <a href="">Yenile</a>
+    <button id="btnAjax">Call Ajax Request</button>
+    <div id="result"></div>
+</body>
+
+</html>

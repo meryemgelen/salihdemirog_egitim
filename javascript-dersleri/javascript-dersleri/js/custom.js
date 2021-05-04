@@ -1,0 +1,1 @@
+console.log("Bu mesaj custom.js den geliyor");

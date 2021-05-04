@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //PascalCase
+        class Car {
+
+        }
+
+        let sayi = 6;
+
+        let car = new Car();
+
+        console.log(typeof car, car);
+
+
+        class Person {
+            constructor(ad, soyad) {
+                console.log("Yapıcı blok çalıştı");
+
+                this.id;
+                this.ad = ad;
+                this.soyad = soyad;
+                this.yas = 18;
+            }
+
+
+
+            getAdSoyad() {
+                return `${this.ad.toUpperCase()} ${this.soyad.toUpperCase()}`;
+            }
+        }
+
+        let person = new Person("Salih", "Demir");
+        person.id = 1;
+        // person.ad = "Salih";
+        // person.soyad = "Demiroğ";
+        //person.yas = 34;
+
+        console.log(person.id, person.ad, person.soyad, person.yas);
+        console.log(person.getAdSoyad());
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

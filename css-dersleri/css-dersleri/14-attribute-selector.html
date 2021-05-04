@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* ul>li[title] {
+            color:red;
+        } */
+
+        /* ul>li[title='izmir'] {
+            color:red;
+        } */
+
+        ul>li:not([title = 'izmir']) {
+            color: red;
+        }
+
+        /* ul>li[title^='i'] {
+            color:red;
+        } */
+
+        /* ul>li[title$='a'] {
+            color:red;
+        } */
+
+        /* ul>li[title *= 'an'] {
+            color:red;
+        } */
+
+        /* ul>li[title ~= 'urfa'] {
+            color:red;
+        } */
+
+        /* ul>li[title][id] {
+            color:red;
+        } */
+    </style>
+</head>
+
+<body>
+    <h3>İller</h3>
+    <ul>
+        <li title="ankara">Ankara</li>
+        <li title="izmir">İzmir</li>
+        <li>Gaziantep</li>
+        <li id="id2" title="istanbul">İstanbul</li>
+        <li title="diyarbakır">Diyarbakır</li>
+        <li title="adana">Adana</li>
+        <li id="id1" title="şanlı urfa">Şanlıurfa</li>
+    </ul>
+</body>
+
+</html>

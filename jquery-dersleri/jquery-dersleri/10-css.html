@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kenarlik {
+            border: 2px solid red;
+            height: 100px;
+        }
+
+        .kenarlik2 {
+            border: 2px dashed black;
+            height: 50px;
+        }
+
+        
+        .arkaPlan {
+            background-color: yellow;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // $("div").css("border","1px solid blue");
+
+            // $("div").css({
+            //     "border": "2px solid blue",
+            //     "height": "50px",
+            //     "background-color": "red",
+            //     "color":"white"
+            // });
+
+
+            // $("div").addClass("kenarlik2");
+            // $("div").addClass("kenarlik");
+            // $("div").removeClass("kenarlik2");
+
+            $("#btnToggleCss").click(function () {
+                $("div").toggleClass("kenarlik");
+
+                let hasKenarlikCssClass = $("div").hasClass("arkaPlan");
+
+                if (hasKenarlikCssClass)
+                    $("div").removeClass("arkaPlan");
+                else
+                    $("div").addClass("arkaPlan");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnToggleCss">Kenarlik</button>
+    <div>Harita Genel Müdürlüğü</div>
+</body>
+
+</html>

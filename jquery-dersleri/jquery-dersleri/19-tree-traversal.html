@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // $("li.red").next().css("color","red");
+            // $("li.red").prev().css("color","orange");
+            // $("li.red").prev(".blue").css("color","blue");
+
+            // $("li.red").prevAll().css("color", "red");
+            // $("li.red").nextAll().css("color", "red");
+
+            // $("li").children("ol").css("color", "red");
+            // $("li").children("ul").css("color", "red");
+            // $("li").children().css("color", "red");
+
+            // $(".list").parent().css("border","1px solid red");
+
+            // $("li.red").siblings().css("border", "1px solid red");
+
+            $(".delete").click(function () {
+                $(this).closest("li").fadeOut(500, function () {
+                    $(this).remove();
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>1.Li</li>
+        <li class="blue">2.Li</li>
+        <li class="red">3.Li</li>
+        <li>4.Li</li>
+        <li>5.Li
+            <ul class="list">
+                <li>5.1 Li</li>
+                <li>5.2 Li</li>
+                <li>5.3 Li</li>
+            </ul>
+        </li>
+        <li>6.Li</li>
+        <li>
+            A <a href="#" class="delete">Sil</a>
+        </li>
+        <li>
+            B <a href="#" class="delete">Sil</a>
+        </li>
+        <li>
+            C <a href="#" class="delete">Sil</a>
+        </li>
+        <li> D
+            <span>
+                <a href="#" class="delete">Sil</a>
+            </span>
+        </li>
+    </ul>
+</body>
+
+</html>

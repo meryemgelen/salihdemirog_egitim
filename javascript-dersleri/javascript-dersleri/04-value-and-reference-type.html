@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10;
+        var b = a;
+
+        a = 5;
+
+        console.log("value (primitive) type");
+        console.log("a", a);
+        console.log("b", b);
+
+        console.log("reference (complex) type")
+
+        var objA = {
+            name: "Salih"
+        };
+
+        var objB = objA;
+
+        objA.name = "Engin";
+
+        console.log("objA", objA.name);
+        console.log("objB", objB.name);
+
+
+        function primitiveDemo(sayi) {
+            sayi = 5;
+        }
+
+        function referenceDemo(obj) {
+            obj.name = "Salih";
+        }
+
+
+        var deger = 10;
+        primitiveDemo(deger);
+        console.log(deger); //10
+
+        var object = {
+            name="Engin"
+        };
+        
+        referenceDemo(object);
+        console.log(object.name); //Salih
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

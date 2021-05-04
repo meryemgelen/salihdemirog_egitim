@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta keywords="harita,müdürlük,harita müdürlüğü" />
+    <meta
+        description="Bir haritacının temel görevi; zamanında, doğru ve ülkesine fayda sağlayacak harita ve harita bilgisi üretmektir." />
+    <title>Harita Genel Müdürlüğü Html Dersleri | Form</title>
+</head>
+
+<body>
+    <h3>
+        İleşitim Bilgileri
+    </h3>
+    <form action="/action.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+        <input type="hidden" name="hdnId" value="1">
+
+        <label for="txtAd">Adınızı Giriniz:</label>
+        <input name="txtAd" id="txtAd" type="text" value="Salih Demiroğ" tabindex="10">
+        <br>
+        <label for="txtMail">Mail Adresini Giriniz:</label>
+        <input name="txtMail" id="txtMail" type="email" placeholder="E-Mail Adresi Giriniz..." tabindex="20">
+        <br>
+        <label for="txtKullaniciAdi">Kullanıcı Adı:</label>
+        <input name="txtKullaniciAdi" id="txtKullaniciAdi" type="text" autocomplete="off" tabindex="15">
+        <br>
+        <label for="txtSifre">Şifre:</label>
+        <input name="txtSifre" id="txtSifre" type="password" tabindex="30">
+        <br>
+        <label for="fileCV">CV:</label>
+        <input name="fileCV" id="fileCV" type="file">
+        <br>
+        <label>Cinsiyet:</label>
+        <input name="rbCinsiyet" type="radio" value="Erkek"> Erkek
+        <input name="rbCinsiyet" type="radio" value="Kadın" checked> Kadın
+        <br>
+        <label>Hobilerim:</label>
+        <input type="checkbox" name="chkHobi" value="Futbol" checked> Futbol
+        <input type="checkbox" name="chkHobi" value="Basketbol"> Basketbol
+        <input type="checkbox" name="chkHobi" value="Voleybol"> Voleybol
+        <input type="checkbox" name="chkHobi" value="Tenis"> Tenis
+        <br>
+        <label>
+            Açıklama:
+            <textarea name="txtAciklama" rows="5"></textarea>
+        </label>
+        <br>
+        <label for="dtDogumTarihi">Doğum Tarihi:</label>
+        <input type="date" name="dtDogumTarihi" id="dtDogumTarihi">
+        <input type="datetime">
+        <br>
+        <label>En Sevgin Renk:</label>
+        <input type="color" name="clFavoriRenk">
+        <br>
+        <label>
+            Ara:
+            <input type="search" name="q">
+        </label>
+        <br>
+        <fieldset>
+            <legend>Diğer</legend>
+            <label>
+                Eğitim Durumu:
+                <select name="ddlEgitimDurumu">
+                    <option value="1">İlkokul</option>
+                    <option value="2">Ortaokul</option>
+                    <option value="3" selected>Lise</option>
+                    <option value="4">Ön Lisans</option>
+                    <option value="5">Lisans</option>
+                    <option value="6">Yüksek Lisans</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                Yaşadığınız Ülke:
+                <input name="dlUlke" list="dlUlke" />
+                <datalist id="dlUlke">
+                    <option value="Türkiye">Türkiye</option>
+                    <option value="Almanya">Almanya</option>
+                    <option value="Fransa">Fransa</option>
+                    <option value="Hollanda">Hollanda</option>
+                </datalist>
+            </label>
+            <br>
+            <label>
+                Favori Arabalar:
+                <select name="ddlArabalar" multiple>
+                    <option value="1">Ford</option>
+                    <option value="2">Hyundai</option>
+                    <option value="3">BMW</option>
+                    <option value="4">Audi</option>
+                    <option value="5">Mercedes</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                Yaş:
+                <input name="rgYas" type="range" min="10" max="80" step="1" value="50" />
+            </label>
+            <br>
+            <label>
+                Web Sitesi:
+                <input name="txtUrl" type="url" />
+            </label>
+            <br>
+            <label>
+                Uğurlu Sayı
+                <input name="txtSayi" type="number" />
+            </label>
+            <br>
+            <label for="disk_c">Disk usage C:</label>
+            <meter id="disk_c" value="90" min="0" max="100" low="50" high="80" optimum="30">2 out of 10</meter>
+            <br>
+            <label for="file">Downloading progress:</label>
+            <progress id="file" value="32" max="100"> 32% </progress>
+        </fieldset>
+
+        <!-- <input type="reset" value="Temizle">
+      <input type="button" value="Kaydet (Input Button)">
+      <input type="submit" value="Kaydet (Input Submit)">
+      <button>Kaydet (Button Submit)</button>
+      <button type="button">Kaydet (Button Button)</button>
+      <button type="reset">Temizle (Button Reset)</button> -->
+        <br>
+        <button>Gönder</button>
+    </form>
+</body>
+
+</html>

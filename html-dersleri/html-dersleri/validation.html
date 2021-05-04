@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta keywords="harita,müdürlük,harita müdürlüğü" />
+    <meta
+        description="Bir haritacının temel görevi; zamanında, doğru ve ülkesine fayda sağlayacak harita ve harita bilgisi üretmektir." />
+    <title>Harita Genel Müdürlüğü Html Dersleri | IFrame</title>
+</head>
+
+<body>
+    <h3>Uye Kayıt Sayfası</h3>
+    <!--novalidate form için validasyonu iptal eder-->
+    <form action="action.php" method="POST" autocomplete="off" >
+        <div>
+            <label> Ad Soyad </label>
+            <br>
+            <input type="text" name="txtAdSoyad" required>
+        </div>
+        <div>
+            <label> E-Mail </label>
+            <br>
+            <input type="email" name="txtMail" required>
+        </div>
+        <div>
+            <label> Şifre </label>
+            <br>
+            <input type="password" name="txtSifre" required minlength="6" maxlength="12" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$">
+        </div>
+        <div>
+            <label>Eğitim Durumu</label>
+            <br>
+            <select name="ddlEgitimDurumu" required>
+                <option value=""></option>
+                <option value="1">İlkokul</option>
+                <option value="2">Ortaokul</option>
+                <option value="3">Lise</option>
+                <option value="4">Ön Lisans</option>
+                <option value="5">Lisans</option>
+                <option value="6">Yüksek Lisans</option>
+            </select>
+        </div>
+        <div>
+            <label> Web Adresi </label>
+            <br>
+            <input type="url" name="txtUrl">
+        </div>
+        <div>
+            <label>Yaş </label>
+            <br>
+            <input type="number" name="txtYas" min="18" max="65">
+        </div>
+        <div>
+            <br>
+            <button>Üye Ol</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnHide").click(function () {
+
+                // $("#lorem").hide();
+
+                // $("#lorem").hide(1000);
+
+                $("#lorem").hide(1000, function () {
+                    alert('gizlendi');
+                });
+            });
+
+            $("#btnShow").click(function () {
+                $("#lorem").show(1000);
+            });
+
+            $("#btnToogle").click(function () {
+                $("#lorem").toggle();
+            });
+
+            $("#btnFadeOut").click(function () {
+                $("#lorem").fadeOut();
+            });
+
+            $("#btnFadeIn").click(function () {
+                $("#lorem").fadeIn();
+            });
+
+            $("#btnFadeToogle").click(function () {
+                $("#lorem").fadeToggle(2000);
+            });
+
+            $("#btnFadeTo").click(function () {
+                $("#lorem").fadeTo(1000, 0.3);
+            });
+
+            $("#btnSlideUp").click(function () {
+                $("#lorem").slideUp();
+            });
+
+            $("#btnSlideDown").click(function () {
+                $("#lorem").slideDown();
+            });
+
+            $("#btnSlideToogle").click(function () {
+                $("#lorem").slideToggle(3000);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <button id="btnToogle">Toogle</button>
+    <hr>
+    <button id="btnFadeOut">FadeOut</button>
+    <button id="btnFadeIn">FadeIn</button>
+    <button id="btnFadeToogle">FadeToogle</button>
+    <button id="btnFadeTo">FadeTo</button>
+    <hr>
+    <button id="btnSlideUp">SlideUp</button>
+    <button id="btnSlideDown">SlideDown</button>
+    <button id="btnSlideToogle">SlideToogle</button>
+
+    <div id="lorem" style="border:1px solid black">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi adipisci est iste, et tempora voluptas,
+        repudiandae natus, harum reprehenderit praesentium itaque similique laudantium repellendus. Eligendi, facilis.
+        Beatae numquam praesentium quia. Tenetur ipsam dolore similique animi est at voluptates, recusandae eaque
+        consequatur placeat possimus error suscipit unde, vero iusto esse soluta quae nulla expedita. Impedit
+        accusantium vero quo dolor culpa, consequuntur at rerum deserunt maxime error ex aspernatur sed? Aliquam
+        expedita dolore distinctio consequatur illum labore enim asperiores non officia vel, ab animi voluptate
+        quibusdam temporibus exercitationem dolores laudantium fuga eaque cum assumenda delectus! Numquam molestias, at
+        ad modi praesentium libero, aut eaque quam quae ducimus dicta dolores id alias veniam odio laborum hic maxime
+        sapiente tempora qui rem iusto? Ipsa vel fugiat eveniet ut aperiam harum, molestias iste vero dolore quam eos
+        placeat cupiditate! Assumenda et, vero eius voluptas libero ipsum dolorum, blanditiis optio deleniti nostrum
+        nihil eos impedit expedita non laborum commodi quae! Maxime, omnis consectetur distinctio sed dolores ullam
+        fugiat rerum laborum placeat aperiam voluptatem, impedit aliquid non sit animi iste quas? Aspernatur pariatur
+        molestiae porro consequatur provident alias doloremque, earum in maiores at! Vel nesciunt iusto alias, sapiente
+        debitis consequatur aliquam? Vel nobis, dolorem atque iusto nostrum consequatur dicta praesentium, temporibus a
+        fugit, quidem porro natus velit tempora. In eaque, similique veritatis obcaecati quae aliquid autem a quia
+        quibusdam accusamus necessitatibus quam assumenda nam, nobis quasi quidem voluptates ipsum! Laudantium
+        perspiciatis nesciunt minima culpa, dolore excepturi dicta incidunt quasi fugiat aliquid mollitia quibusdam,
+        deserunt unde possimus quam velit aspernatur error voluptatum maiores? Temporibus amet vel soluta commodi iste
+        in esse laboriosam! Itaque obcaecati quam excepturi dolor fugiat adipisci quia at ratione ipsam veniam beatae
+        corrupti placeat in rem quibusdam, doloremque cumque asperiores sequi pariatur minus! Cum optio laborum saepe
+        repudiandae beatae velit repellendus incidunt illo soluta! Voluptas.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        console.log(sayac);
+        var sayac = 1;
+
+        //Yukarıdaki işlem hoisting ile aşağıdaki hali alır
+        // var sayac = undefined;
+        // console.log(sayac);
+        // sayac = 1;
+
+        // console.log(deger);
+        // let deger = "salih"; //let ve const hoisting ile yukarı taşınır fakat undefined değeri atanmaz 
+
+        let deger;
+        console.log(deger);
+        deger="Salih";
+
+        fnc();
+
+        function fnc() {
+
+            console.log("çalıştı");
+        }
+
+        var maliyet = adet * fiyat;
+        var adet = 10;
+        var fiyat = 100;
+
+        console.log("Maliyet", maliyet);
+
+        
+        merhaba();
+
+        var merhaba = function () {
+            console.log("Merhaba Dünya");
+        }
+
+        //Yukarıdaki işlemin hoisted hali
+        // var merhaba = undefined;
+        // merhaba();
+        // merhaba = function () {
+        //     console.log("Merhaba Dünya");
+        // }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

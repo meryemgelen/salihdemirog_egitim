@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let promise = new Promise(function (resolve, reject) {
+            setTimeout(resolve, 5000, 'Salih');
+        });
+
+        promise.then(
+            value => console.log('veri geldi: ' + value), 
+            error => console.log('iptal edildi: ' + error)
+        );
+
+        console.log("Bitti");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

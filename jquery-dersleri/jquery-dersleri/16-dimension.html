@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            margin: 20px;
+            border: 3px solid red;
+            background-color: yellow;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+
+            function getDimensions() {
+
+                $("#box").empty();
+
+                let width = $("#box").width();
+                let height = $("#box").height();
+
+                let innerWidth = $("#box").innerWidth();
+                let innerHeight = $("#box").innerHeight();
+
+                let outerWidth = $("#box").outerWidth();
+                let outerHeight = $("#box").outerHeight();
+
+                let outerWidthAndMargin = $("#box").outerWidth(true);
+                let outerHeightAndMargin = $("#box").outerHeight(true);
+
+                $("#box").append(`width x height : <span>${width}x${height}</span><br>`);
+                $("#box").append(`innerWidth x innerHeight : <span>${innerWidth}x${innerHeight}</span><br>`);
+                $("#box").append(`outerWidth x outerHeight : <span>${outerWidth}x${outerHeight}</span><br>`);
+                $("#box").append(`outerWidthAndMargin x outerHeightAndMargin : <span>${outerWidthAndMargin}x${outerHeightAndMargin}</span><br>`);
+            }
+
+
+            getDimensions();
+
+            $("#btnChange").click(function () {
+                $("#box").width("500px");
+                $("#box").height("300px");
+
+                getDimensions();
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <button id="btnChange">Değiştir</button>
+    <div id="box">
+
+    </div>
+</body>
+
+</html>

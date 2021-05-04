@@ -1,0 +1,15 @@
+﻿@charset "UTF-8";
+html {
+	min-height:100%;
+	height:auto;
+}
+body {
+	background: url(images/background_grass.png)  bottom repeat-x,
+				url(images/background_stone.png)  bottom right no-repeat,
+				url(images/background_clouds.png) left top repeat-x,
+				url(images/background_sun.png) right top no-repeat ,
+	  			url(images/background_sky.png) top repeat-x rgba(255,255,255,1);
+
+    background-size: auto, auto, auto, auto, auto;
+    
+}

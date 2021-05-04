@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var productId = "P-123";
+
+        console.log(window.productId);
+        console.log(this === window);
+
+        let fn = function () {
+            console.log(this === window);
+        };
+
+        fn();
+
+        var obj = {
+            ad:"Salih",
+            soyad:"Demiroğ",
+            getAdSoyad: function () {
+                return this.ad +' ' + this.soyad;
+            }
+        };
+
+
+        console.log(obj.getAdSoyad());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

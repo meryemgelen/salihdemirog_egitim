@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var date= new Date();
+        // var array = [];
+        // var array2= new Array();
+        // var regex= new RegExp("[a-z]");
+
+        // var ad= new String("Salih");
+        // var soyad = "Demiroğ";
+
+        // console.log(typeof ad, ad);
+        // console.log(typeof soyad,soyad);
+
+        //PascalCase
+        function Car(carId) {
+            // console.log(this==window);
+            this.id = carId;
+            this.start = function () {
+                console.log("Araba çalıştırıldı");
+            }
+        }
+
+        var car = new Car(123);
+
+        console.log(typeof Car);
+        console.log(typeof car);
+
+        console.log(car.id);
+        car.start();
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

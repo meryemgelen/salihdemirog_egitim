@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var sayi = 10;
+        // console.log(this == window);
+        // window.console.log(window.sayi);
+        // console.log(sayi);
+
+        // if (confirm("Devam etmek istiyor musunuz?")) {
+        //     console.log("evet");
+        // } else
+        //     console.log("hayır");
+
+
+        // let yas = prompt("Kaç yaşındasınız");
+
+        // alert(yas);
+
+        // open("https://google.com","_blank");
+
+        let myWindow = open("", "MyWindow", "width=1000,height=1000");
+        myWindow.document.write("<b>Merhaba Dünya</b><p>Paragraf</p>");
+        myWindow.document.close();
+        myWindow.print();
+        
+        myWindow.close();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

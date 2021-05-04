@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+
+            let $lblMessage = $("#lblMessage");
+
+            $lblMessage.hide();
+
+            $("#submitElement").click(function () {
+                $("#frm").submit();
+            });
+
+            $("#chkGift").change(function () {
+
+                var isGift = $(this).prop("checked");
+                console.log(isGift);
+
+                if (isGift)
+                    $lblMessage.show();
+                else
+                    $lblMessage.hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="frm" action="/action.php" method="GET">
+        <input type="text" name="txtFirstName">
+        <br>
+        <select name="ddlEducation">
+            <option value="Lise">Lise</option>
+            <option value="Lisans">Lisans</option>
+            <option value="Doktora">Doktora</option>
+        </select>
+        <br>
+        <input type="checkbox" name="isGift" id="chkGift"> Hediye Mi?
+        <br>
+        <label id="lblMessage" for="">
+            Mesaj
+
+            <input type="text">
+        </label>
+
+    </form>
+    <div id="submitElement" style="border:1px solid red; display: inline;">Gönder</div>
+</body>
+
+</html>

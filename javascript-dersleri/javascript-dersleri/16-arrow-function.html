@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // let getId = function () {
+        //     return 123;
+        // }
+
+        //yerine arrow func yazalım
+
+
+        let getId = () => 123;
+
+        // function merhaba(isim) {
+        //     console.log("Merhaba " + isim);
+        // }
+
+        let merhaba = i => console.log("Merhaba " + i);
+
+        let toplama = (a, b) => a + b;
+
+        let ortalama = (a, b, c) => {
+            var toplam = a + b + c;
+
+            return toplam / 3.0;
+        };
+
+        console.log(getId());
+
+        merhaba("Zeynep");
+
+        console.log(toplama(3, 4));
+
+        console.log(ortalama(34, 54, 32));
+
+        var sayilar = ["Salih", "Mehmet", "Ahmet"];
+
+        sayilar.forEach((eleman, i) => {
+            console.log(i, eleman);
+        });
+
+
+        var sayilar = [3, 6, 3, 2, 80, 10, 4];
+
+        function topla(sayiArray) {
+            var toplam = 0;
+
+            for (let index = 0; index < sayiArray.length; index++) {
+                const sayi = sayiArray[index];
+                // toplam = toplam + sayi;
+                toplam += sayi;
+            }
+
+            return toplam;
+        }
+
+        var toplam = sayilar.reduce((pre, cur) => pre + cur, 0);
+        console.log(toplam);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

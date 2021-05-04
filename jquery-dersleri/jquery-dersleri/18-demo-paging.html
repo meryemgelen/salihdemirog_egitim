@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.paging {
+            padding: 0;
+            margin: 0;
+        }
+
+        .paging li {
+            margin-top: 3px;
+            padding: 3px;
+            border: 2px solid gray;
+            list-style: none;
+        }
+
+        .pager {
+            margin-top: 5px;
+        }
+
+        .pager a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 5px;
+            text-decoration: none;
+            border: 1px solid gray;
+            font-weight: bold;
+            color: lightskyblue;
+        }
+
+        .active{
+            background-color: lightblue;
+            color:gray !important;
+        }
+    </style>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            let totalLiCount = $(".paging li").length;
+            let perPage = 3;
+            let totalPageCount = Math.ceil(totalLiCount / perPage);
+
+            // console.log(totalPageCount);
+
+            $(".paging li").slice(perPage).hide();
+
+            for (let i = 1; i <= totalPageCount; i++) {
+                $(".pager").append(`<a href="#">${i}</a>`);
+            }
+
+            $(".pager a").first().addClass("active");
+
+            $(".pager a").click(function () {
+                $(".pager a").removeClass("active");
+
+                $(this).addClass("active");
+
+
+                let indexNo = $(this).index();
+
+                $(".paging li").hide();
+
+                let startIndex= indexNo*perPage;
+                let endIndex= startIndex + perPage;
+
+                // console.log(startIndex,endIndex);
+
+                $(".paging li").slice(startIndex,endIndex).fadeIn();
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <ul class="paging">
+        <li>1. Li</li>
+        <li>2. Li</li>
+        <li>3. Li</li>
+        <li>4. Li</li>
+        <li>5. Li</li>
+        <li>6. Li</li>
+        <li>7. Li</li>
+        <li>8. Li</li>
+        <li>9. Li</li>
+        <li>10. Li</li>
+        <li>11. Li</li>
+        <li>12. Li</li>
+        <li>13. Li</li>
+        <li>14. Li</li>
+        <li>15. Li</li>
+        <li>16. Li</li>
+    </ul>
+    <div class="pager"></div>
+</body>
+
+</html>

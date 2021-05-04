@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="btn1">Tıkla</button>
+    <script>
+        try {
+            document.getElementById("btn1").removeEventListener("click", null);
+
+            if (true)
+                throw new Error("hatayı ben oluşturdum");
+
+            // console.log("Devam ediyor.....");
+        }
+        catch (error) {
+            console.warn("Bir hata oluştu");
+            console.log("Hata", error);
+        }
+        finally {
+            console.log("finally");
+        }
+
+        console.log("Devam ediyor.....");
+
+    </script>
+</body>
+
+</html>

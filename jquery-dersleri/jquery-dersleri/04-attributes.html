@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnVal").click(function () {
+                let valueOfTxt = $("#txt").val();
+                alert(valueOfTxt);
+            });
+
+            $("#btnSetVal").click(function () {
+                $("#txt").val('Harita Genel Müdürlüğü');
+            });
+
+            $("#btnHtml").click(function () {
+                let htmlData = $("div").html();
+                alert(htmlData);
+            });
+
+            $("#btnText").click(function () {
+                let textData = $("div").text();
+                alert(textData);
+            });
+
+            $("#btnSetHtml").click(function () {
+                $("div").html("<b>Harita</b> Genel  Müdürlüğü");
+            });
+
+            $("#btnSetText").click(function () {
+                $("div").text("<b>Harita</b> Genel  Müdürlüğü");
+            });
+
+            $("#btnAttr").click(function () {
+                $("img").attr("src", "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png")
+            });
+
+
+            $("#btnGetAttr").click(function () {
+                let imageSource= $("img").attr("src");
+                alert(imageSource);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button id="btnVal">Get TextBox Value</button>
+    <button id="btnSetVal">Set TextBox Value</button>
+    <button id="btnHtml">Get Div Html</button>
+    <button id="btnText">Get Div Text</button>
+    <button id="btnSetHtml">Set Div Html</button>
+    <button id="btnSetText">Set Div Text</button>
+    <button id="btnAttr">Set Image</button>
+    <button id="btnGetAttr">Get Image Source</button>
+
+
+    <div>Harita <strong>Genel Müdürlüğü</strong></div>
+
+    <img src="google.png" alt="Google">
+</body>
+
+</html>

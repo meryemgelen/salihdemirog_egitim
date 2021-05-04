@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // var sayac = 0;
+
+        // function arttir() {
+
+        //     console.log(sayac);
+
+        //     sayac++;
+        // }
+
+        // var sayac= 0;
+        // function arttir2() {
+
+        //     console.log(sayac);
+
+        //     sayac++;
+        // }
+
+        var selfInv = (function () {
+            var sayac = 0;
+
+            var arttir = function () {
+                sayac++;
+                return sayac;
+            }
+
+            return {
+                arttir: arttir,
+                sayac:sayac,
+            };
+
+        })();
+
+        // console.log(selfInv());
+        // console.log(selfInv());
+        // console.log(selfInv());
+        // console.log(selfInv());
+
+        console.log(selfInv.arttir(), selfInv.sayac);
+        console.log(selfInv.arttir());
+        console.log(selfInv.arttir());
+
+    </script>
+</head>
+
+<body>
+
+
+
+    <!-- <button onclick="arttir()">
+        Sayac Arttır
+    </button>
+    <button onclick="arttir2()">
+        Sayac Arttır 2
+    </button> -->
+
+</body>
+
+</html>

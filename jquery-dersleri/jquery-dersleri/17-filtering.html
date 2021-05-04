@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // $("ul>li").first().css("background-color","yellow");
+
+            // $("ul>li").last().css("background-color","yellow");
+
+            // $("ul>li").even().css("background-color", "yellow");
+            // $("ul>li").odd().css("background-color", "red");
+
+            // $("ul>li").eq(3).css("background-color", "yellow");
+
+            // $("ul>li").slice(3).css("background-color", "yellow");
+
+            // $("ul>li").slice(3,7).css("background-color", "yellow");
+
+            // $("ul>li").filter(".blue").css("background-color", "yellow");
+
+            // $("ul>li").filter(function (index) {
+            //     return index % 2 == 0;
+            // }).css("background-color", "yellow");
+
+            // $("ul>li").not(".blue").css("background-color", "yellow");
+
+            // $("ul").click(function (event) {
+            //     let $target = $(event.target);
+
+            //     if ($target.is("span"))
+            //         $target.css("background-color", "yellow");
+            // });
+
+
+            $("li").has("span").css("background-color", "yellow");
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>0. Li</li>
+        <li>1. Li</li>
+        <li>2. Li</li>
+        <li class="blue">3. Li</li>
+        <li>4. Li</li>
+        <li><span>5. Li</span></li>
+        <li class="blue">6. Li</li>
+        <li>7. Li</li>
+        <li><span>8. Li</span></li>
+        <li>9. Li</li>
+    </ul>
+</body>
+
+</html>

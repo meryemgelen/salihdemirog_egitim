@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let apiData =
+            [
+                { "id": 1, "name": "Süpermarket", "description": null },
+                { "id": 2, "name": "Elektronik", "description": null },
+                { "id": 3, "name": "Moda", "description": null },
+                { "id": 4, "name": "Kitap, Müzik", "description": null },
+                { "id": 5, "name": "Anne,Bebek,Oyuncak", "description": null }
+            ];
+
+        var stringData = JSON.stringify(apiData);
+        console.log(typeof stringData, stringData);
+
+        var obj = JSON.parse(stringData);
+        console.log(typeof obj, obj);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

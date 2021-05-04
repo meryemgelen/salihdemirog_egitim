@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/assets/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnHello").click(function () {
+                alert('Merhaba');
+            });
+
+            $("#btnHelloOne").one("click", function () {
+                alert('1 Kez Merhaba');
+            });
+
+            let i = 0;
+            // $("button").click(function () {
+            //     $(this).after(`<button>${++i}. Buton Oluştur</button>`);
+            // });
+
+            $("#div1").on("click", "button", function () {
+                $(this).after(`<button>${++i}. Buton Oluştur</button>`);
+            });
+
+            $("#btnOff").click(function () {
+                $("#div1").off("click", "button");
+
+                alert("Durduruldu");
+            });
+
+            let btnCounter = 0;
+            $("#btn1").click(function () {
+                $(this).html(++btnCounter);
+            });
+
+            let btnCounter2 = 0;
+            $("#btn2").click(function () {
+                $(this).html(++btnCounter2);
+
+                $("#btn1").trigger("click");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btnHello">Merhaba De</button>
+    <button id="btnHelloOne">1 Defa Merhaba De</button>
+    <hr>
+    <button id="btnOff">Buton Oluşturmayı Durdur</button>
+    <div id="div1">
+        <button>Buton Oluştur</button>
+    </div>
+
+    <hr>
+    <button id="btn1">Btn 1 Sayac</button>
+    <button id="btn2">Btn 2 Sayac</button>
+</body>
+
+</html>
